@@ -27,6 +27,9 @@ function openModal(type) {
     const content = document.getElementById('modal-content');
 
     content.innerHTML = `
+        <button onclick="closeModal()" class="absolute top-6 right-6 z-10 text-dark md:text-white bg-white/80 md:bg-transparent p-2 rounded-full hover:text-primary transition-colors">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
         <div class="md:w-1/2 h-[300px] md:h-auto overflow-hidden">
             <img src="${data.image}" class="w-full h-full object-cover">
         </div>
@@ -49,12 +52,28 @@ function openModal(type) {
 
     overlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+    lucide.createIcons(); // Refresh icons for the newly injected close button
 }
 
 function closeModal() {
     const overlay = document.getElementById('modal-overlay');
     overlay.classList.add('hidden');
     document.body.style.overflow = '';
+}
+
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const isHidden = menu.classList.contains('hidden');
+    
+    if (isHidden) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    } else {
+        menu.classList.add('hidden');
+        menu.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
