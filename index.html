@@ -3,21 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Pitza | Engineering Pizza Excellence</title>
-=======
-    <title>Pitza | Catering Pizza Napoletana Moderna</title>
-    <meta name="description" content="Esperienza gourmet di pizza napoletana per eventi, matrimoni e corporate. Show cooking e forno mobile professionale.">
->>>>>>> parent of d0b97ce (test 21st.dev)
+    <title>Pitza | La vera Pizza Napoletana per i tuoi Eventi</title>
     
-    <!-- Modern Sans Fonts (Geist/Inter style) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<<<<<<< HEAD
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-=======
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
->>>>>>> parent of d0b97ce (test 21st.dev)
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,379 +15,167 @@
             theme: {
                 extend: {
                     colors: {
-<<<<<<< HEAD
                         primary: '#FF3B30',
-                        dark: '#000000',
-                        card: '#0A0A0A',
-                        border: '#1F1F1F'
+                        dark: '#1A1A1A',
+                        light: '#F9F9F9',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-=======
-                        primary: '#FF0000',
-                        secondary: '#1A1A1A',
-                        accent: '#61CE70',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
->>>>>>> parent of d0b97ce (test 21st.dev)
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<<<<<<< HEAD
-<body class="bg-dark text-white antialiased selection:bg-primary/30">
+<body class="bg-white text-dark antialiased">
 
-    <!-- Oryzo Background: Dot Grid & Radial Glow -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
-        <!-- Dot Grid Pattern -->
-        <div class="absolute inset-0 bg-[radial-gradient(#1f1f1f_1px,transparent_1px)] [background-size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40"></div>
-        <!-- Ambient Glow -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-primary/5 blur-[120px]"></div>
-    </div>
-
-    <!-- Floating Minimal Navbar -->
-    <nav id="navbar" class="fixed top-6 w-full z-50 px-6">
-        <div class="max-w-4xl mx-auto flex justify-between items-center bg-card/60 backdrop-blur-md border border-border rounded-2xl px-6 py-2.5 shadow-2xl relative">
-            
-            <div class="hidden md:flex items-center space-x-6 text-[11px] font-medium uppercase tracking-widest text-neutral-500">
-                <a href="#vision" class="hover:text-white transition-colors">Vision</a>
-                <a href="#format" class="hover:text-white transition-colors">Format</a>
-            </div>
-
-            <a href="#" class="absolute left-1/2 -translate-x-1/2">
-                <img src="./assets/logo-pitza.png" alt="Logo" class="h-10 w-auto">
-=======
-<body class="bg-white text-secondary antialiased overflow-x-hidden">
-
-    <!-- Sticky Navbar -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3 shadow-lg">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-10 w-auto">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo Left (Larger) -->
+            <a href="#" class="flex items-center">
+                <img src="./assets/logo-pitza.png" alt="Logo Pitza" class="h-16 md:h-20 w-auto transition-transform hover:scale-105">
             </a>
             
-            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+            <!-- Links Right -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest">
                 <a href="#chi-siamo" class="hover:text-primary transition-colors">Chi Siamo</a>
-                <a href="#servizi" class="hover:text-primary transition-colors">Servizi</a>
+                <a href="#eventi" class="hover:text-primary transition-colors">Eventi</a>
                 <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
-                <a href="#contatti" class="hover:text-primary transition-colors">Contatti</a>
-            </div>
-            
-            <a href="https://wa.me/+393914604647" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform text-sm">
-                ORDINA ORA
->>>>>>> parent of d0b97ce (test 21st.dev)
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-6 text-[11px] font-medium uppercase tracking-widest text-neutral-500">
-                <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
-                <a href="#contact" class="hover:text-white transition-colors text-primary font-bold">Inizia</a>
+                <a href="#contatti" class="hover:text-primary transition-colors text-primary">Contatti</a>
             </div>
 
-            <!-- Mobile menu trigger -->
-            <button class="md:hidden text-neutral-400">
-                <i data-lucide="menu" class="w-5 h-5"></i>
+            <!-- Mobile Menu -->
+            <button class="md:hidden text-dark">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-<<<<<<< HEAD
-    <section class="min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <!-- Badge -->
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-border bg-card mb-10 reveal-item">
-                <div class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Authentic Catering 2.0</span>
-            </div>
-
-            <h1 class="text-6xl md:text-[90px] font-extrabold tracking-tighter leading-[0.95] mb-8 reveal-item">
-                PIZZA <br> <span class="bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent">ENGINEERING.</span>
+    <section class="relative min-h-[90vh] flex items-center justify-center pt-32 px-6 bg-light">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Catering d'autore</span>
+            <h1 class="text-6xl md:text-[100px] font-extrabold leading-[0.9] tracking-tighter">
+                PORTIAMO LA <br> <span class="text-primary italic">MAGIA</span> IN TAVOLA.
             </h1>
-
-            <p class="text-lg text-neutral-500 font-medium max-w-xl mx-auto leading-relaxed mb-12 reveal-item">
-                Abbiamo riprogettato l'esperienza della pizza per i tuoi eventi. 
-                Sistemi di cottura avanzati, design minimale e sapore millenario.
+            <p class="text-xl text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
+                Dal forno mobile allo show cooking: rendiamo il tuo evento unico con l'autentica pizza napoletana.
             </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-item">
-                <a href="#contact" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:scale-105 transition-all shadow-lg shadow-primary/20">
-                    Pianifica ora
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+                <a href="#contatti" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-dark transition-colors shadow-xl shadow-primary/20">
+                    Richiedi Preventivo
                 </a>
-                <a href="#format" class="w-full sm:w-auto bg-card border border-border text-neutral-300 px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-neutral-900 transition-all">
-                    I nostri sistemi
+                <a href="#eventi" class="w-full sm:w-auto bg-white border-2 border-gray-100 text-dark px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:border-primary transition-all">
+                    Scopri i Servizi
                 </a>
             </div>
         </div>
-
-        <!-- Central Logo Watermark -->
-        <div class="mt-20 opacity-10 animate-pulse">
-            <img src="./assets/logo-pitza.png" class="h-32 md:h-48 grayscale">
-        </div>
     </section>
 
-    <!-- Features Section (The Oryzo "Box" style) -->
-    <section id="vision" class="py-40 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div class="space-y-6">
-                <h2 class="text-4xl font-bold tracking-tight">Visione <span class="text-primary italic">Sinergica.</span></h2>
-                <p class="text-neutral-500 leading-relaxed">Ogni evento è un ecosistema. Pitza si integra nel tuo spazio con un'architettura di servizio pulita, efficiente e scenografica.</p>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4">
-                <div class="p-6 bg-card border border-border rounded-2xl">
-                    <div class="text-primary font-bold text-3xl mb-2">99.9%</div>
-                    <p class="text-[10px] uppercase font-bold text-neutral-600 tracking-widest">Affidabilità</p>
-                </div>
-                <div class="p-6 bg-card border border-border rounded-2xl">
-                    <div class="text-white font-bold text-3xl mb-2">30"</div>
-                    <p class="text-[10px] uppercase font-bold text-neutral-600 tracking-widest">Cottura Rapida</p>
-=======
-    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div id="hero-content" class="z-10">
-                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-widest mb-6 uppercase">
-                    The Real Pizza Experience
-                </span>
-                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
-                    PIZZA <br> <span class="text-primary italic">SUL MOMENTO.</span>
-                </h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
-                    Portiamo l'autentica arte della pizza napoletana direttamente nel tuo evento. Show cooking, forno mobile e ingredienti d'eccellenza.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contatti" class="bg-secondary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary transition-colors text-center">
-                        Richiedi Preventivo
-                    </a>
-                    <a href="#servizi" class="border-2 border-secondary px-8 py-4 rounded-xl font-bold hover:bg-secondary hover:text-white transition-all text-center">
-                        Scopri i Servizi
-                    </a>
-                </div>
-            </div>
-            
-            <div id="hero-image" class="relative">
-                <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-                <img src="./assets/pizza-cutout.png" alt="Pizza Napoletana" class="w-full h-auto drop-shadow-2xl floating">
-            </div>
-        </div>
-    </section>
-
-    <!-- Chi Siamo (Whitespace Focus) -->
-    <section id="chi-siamo" class="py-32 px-6 bg-gray-50">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-6xl font-black mb-12">TRADIZIONE <br>IN MOVIMENTO.</h2>
-            <div class="grid md:grid-cols-2 gap-12 text-left">
-                <p class="text-xl leading-relaxed text-gray-700">
-                    Pitza nasce dalla passione per l'accoglienza e l'autenticità. Non siamo un semplice catering, siamo un'esperienza sensoriale che trasforma ogni festa in un momento indimenticabile.
-                </p>
-                <p class="text-xl leading-relaxed text-gray-700">
-                    Con il nostro forno mobile professionale, garantiamo una cottura perfetta e un servizio rapido, mantenendo l'identità visiva e la qualità che ci contraddistinguono.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servizi (Bento Grid) -->
-    <section id="servizi" class="py-32 px-6">
+    <!-- Eventi (3 Blocks Interaction) -->
+    <section id="eventi" class="py-32 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div>
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Cosa Facciamo</span>
-                    <h2 class="text-5xl font-black mt-2">I NOSTRI SERVIZI.</h2>
-                </div>
-                <p class="max-w-xs text-gray-500">Soluzioni su misura per ogni tipo di evento, dalla festa privata al grande evento corporate.</p>
+            <div class="text-center mb-20 space-y-4">
+                <h2 class="text-5xl font-extrabold tracking-tight">I nostri format.</h2>
+                <p class="text-gray-400 font-medium">Soluzioni su misura per ogni tipologia di occasione.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
-                <!-- Bento Card 1 -->
-                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl bg-primary shadow-xl">
-                    <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
-                        <span class="text-xs font-bold uppercase tracking-tighter mb-2">Luxury Events</span>
-                        <h3 class="text-4xl font-black mb-4 leading-none">MATRIMONI <br>& GALA.</h3>
-                        <p class="text-white/80 max-w-xs">Un tocco di classe e tradizione per il tuo giorno più bello. Corner pizza elegante e servizio impeccabile.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Block 1: Matrimoni -->
+                <div class="event-block group relative h-[500px] overflow-hidden rounded-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+                    <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-10 flex flex-col justify-end text-white">
+                        <h3 class="text-4xl font-extrabold mb-4">Matrimoni</h3>
+                        <p class="text-white/70 text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Un corner pizza elegante e scenografico per il tuo giorno più bello.</p>
                     </div>
                 </div>
-                
-                <!-- Bento Card 2 -->
-                <div class="md:col-span-2 relative group overflow-hidden rounded-3xl bg-secondary shadow-xl">
-                    <div class="absolute inset-0 p-10 flex flex-col justify-center">
-                        <i data-lucide="briefcase" class="text-primary mb-4 w-10 h-10"></i>
-                        <h3 class="text-2xl font-black text-white mb-2 uppercase">Corporate</h3>
-                        <p class="text-white/60">Meeting aziendali e team building con show cooking live.</p>
+
+                <!-- Block 2: Aziendali -->
+                <div class="event-block group relative h-[500px] overflow-hidden rounded-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+                    <img src="./assets/gallery-1.jpg" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-10 flex flex-col justify-end text-white">
+                        <h3 class="text-4xl font-extrabold mb-4">Aziendali</h3>
+                        <p class="text-white/70 text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Launch party e team building con un sapore autentico e professionale.</p>
                     </div>
                 </div>
-                
-                <!-- Bento Card 3 -->
-                <div class="relative group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-xl">
-                    <div class="absolute inset-0 p-8 flex flex-col justify-between">
-                        <i data-lucide="party-popper" class="text-primary w-8 h-8"></i>
-                        <h3 class="text-xl font-bold uppercase">Feste <br>Private</h3>
-                    </div>
-                </div>
-                
-                <!-- Bento Card 4 -->
-                <div class="relative group overflow-hidden rounded-3xl bg-accent shadow-xl">
-                    <div class="absolute inset-0 p-8 flex flex-col justify-between text-white">
-                        <i data-lucide="graduation-cap" class="text-white w-8 h-8"></i>
-                        <h3 class="text-xl font-bold uppercase">Lauree</h3>
+
+                <!-- Block 3: Privati -->
+                <div class="event-block group relative h-[500px] overflow-hidden rounded-[40px] shadow-2xl transition-all duration-700 hover:-translate-y-4">
+                    <img src="./assets/gallery-3.jpeg" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-10 flex flex-col justify-end text-white">
+                        <h3 class="text-4xl font-extrabold mb-4">Privati</h3>
+                        <p class="text-white/70 text-sm font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">Portiamo la pizzeria napoletana direttamente nel tuo giardino.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="py-32 px-6 bg-secondary text-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl font-black mb-16 text-center">MOMENTI REALI.</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-2xl aspect-square">
-                    <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
-                </div>
-                <div class="overflow-hidden rounded-2xl aspect-square">
-                    <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
-                </div>
-                <div class="overflow-hidden rounded-2xl aspect-square col-span-2 md:col-span-1">
-                    <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
->>>>>>> parent of d0b97ce (test 21st.dev)
-                </div>
-            </div>
-        </div>
-    </section>
-
-<<<<<<< HEAD
-    <!-- Format Section (Oryzo Cards with Border Beam concept) -->
-    <section id="format" class="py-40 px-6 bg-neutral-950/50">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="group relative overflow-hidden bg-card border border-border rounded-3xl p-8 hover:border-primary/50 transition-all duration-500">
-                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-100 transition-opacity">
-                        <img src="./assets/logo-pitza.png" class="h-6">
-                    </div>
-                    <i data-lucide="heart" class="w-8 h-8 text-primary mb-12"></i>
-                    <h3 class="text-2xl font-bold mb-4">Matrimoni</h3>
-                    <p class="text-neutral-500 text-sm leading-relaxed">Integrazione perfetta in contesti di lusso. Design pulito per sposi esigenti.</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="group relative overflow-hidden bg-card border border-border rounded-3xl p-8 hover:border-primary/50 transition-all duration-500">
-                    <i data-lucide="zap" class="w-8 h-8 text-primary mb-12"></i>
-                    <h3 class="text-2xl font-bold mb-4">Corporate</h3>
-                    <p class="text-neutral-500 text-sm leading-relaxed">Velocità di esecuzione e professionalità per il tuo business event.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="group relative overflow-hidden bg-card border border-border rounded-3xl p-8 hover:border-primary/50 transition-all duration-500">
-                    <i data-lucide="users" class="w-8 h-8 text-primary mb-12"></i>
-                    <h3 class="text-2xl font-bold mb-4">Privati</h3>
-                    <p class="text-neutral-500 text-sm leading-relaxed">L'eccellenza di Pitza direttamente nello spazio della tua casa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery (Minimal Mosaic) -->
-    <section id="gallery" class="py-40 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <h2 class="text-4xl font-bold tracking-tight">Visual <span class="text-neutral-500">Logs.</span></h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-[600px]">
-                <div class="md:col-span-2 overflow-hidden rounded-3xl">
-                    <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000 grayscale hover:grayscale-0">
-                </div>
-                <div class="overflow-hidden rounded-3xl">
-                    <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
-                </div>
-                <div class="overflow-hidden rounded-3xl">
-                    <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form (Oryzo Terminal style) -->
-    <section id="contact" class="py-40 px-6">
-        <div class="max-w-3xl mx-auto bg-card border border-border rounded-[32px] overflow-hidden shadow-2xl">
-            <div class="bg-neutral-900/50 px-8 py-4 border-b border-border flex items-center justify-between">
-                <div class="flex space-x-2">
-                    <div class="w-2.5 h-2.5 bg-red-500/20 rounded-full"></div>
-                    <div class="w-2.5 h-2.5 bg-yellow-500/20 rounded-full"></div>
-                    <div class="w-2.5 h-2.5 bg-green-500/20 rounded-full"></div>
-                </div>
-                <span class="text-[9px] font-bold text-neutral-600 uppercase tracking-widest">Connect to Pitza_System</span>
-            </div>
-            
-            <form class="p-10 space-y-8">
-                <div class="space-y-2">
-                    <label class="text-[10px] uppercase font-bold text-neutral-500 tracking-widest">Identity</label>
-                    <input type="text" placeholder="Nome Completo" class="w-full bg-transparent border-b border-border py-3 outline-none focus:border-primary transition-all text-xl font-medium">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] uppercase font-bold text-neutral-500 tracking-widest">Communication</label>
-                    <input type="email" placeholder="Indirizzo Email" class="w-full bg-transparent border-b border-border py-3 outline-none focus:border-primary transition-all text-xl font-medium">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] uppercase font-bold text-neutral-500 tracking-widest">Message</label>
-                    <textarea placeholder="Dettagli dell'evento..." class="w-full bg-transparent border-b border-border py-3 outline-none focus:border-primary transition-all text-xl font-medium h-24 resize-none"></textarea>
-                </div>
-                
-                <button class="w-full bg-white text-black py-5 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">
-=======
-    <!-- Contact Section -->
-    <section id="contatti" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+    <!-- Gallery (Horizontal Scroller) -->
+    <section id="gallery" class="py-32 bg-light overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
             <div>
-                <h2 class="text-5xl font-black mb-8">FACCIAMO <br>FESTA?</h2>
-                <p class="text-xl text-gray-600 mb-12">Raccontaci il tuo evento. Riceverai un preventivo personalizzato in meno di 24 ore.</p>
+                <h2 class="text-5xl font-extrabold tracking-tight">Gallery.</h2>
+                <p class="text-gray-400 font-medium">Scorri i nostri momenti migliori.</p>
+            </div>
+            <div class="flex space-x-2">
+                <button id="prev" class="p-4 bg-white rounded-full shadow-lg hover:bg-primary hover:text-white transition-all"><i data-lucide="arrow-left"></i></button>
+                <button id="next" class="p-4 bg-white rounded-full shadow-lg hover:bg-primary hover:text-white transition-all"><i data-lucide="arrow-right"></i></button>
+            </div>
+        </div>
+        
+        <div id="gallery-slider" class="flex space-x-6 px-6 overflow-x-auto snap-x no-scrollbar pb-10">
+            <!-- Immagini Gallery -->
+            <div class="snap-center shrink-0 w-[300px] md:w-[450px] h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-xl">
+                <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="snap-center shrink-0 w-[300px] md:w-[450px] h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-xl">
+                <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="snap-center shrink-0 w-[300px] md:w-[450px] h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-xl">
+                <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover">
+            </div>
+            <div class="snap-center shrink-0 w-[300px] md:w-[450px] h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-xl">
+                <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="snap-center shrink-0 w-[300px] md:w-[450px] h-[300px] md:h-[450px] rounded-[40px] overflow-hidden shadow-xl">
+                <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contatti" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="space-y-8">
+                <h2 class="text-6xl font-extrabold tracking-tight italic">Pronto per <br>ordinare?</h2>
+                <p class="text-gray-500 font-medium leading-relaxed">Raccontaci il tuo evento. Ti risponderemo con una proposta personalizzata e senza impegno.</p>
                 
-                <div class="space-y-6">
-                    <a href="tel:+393914604647" class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
-                        <div class="bg-primary p-3 rounded-xl text-white">
+                <div class="space-y-4">
+                    <a href="tel:+393914604647" class="flex items-center space-x-4 group">
+                        <div class="p-3 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all">
                             <i data-lucide="phone"></i>
                         </div>
-                        <div>
-                            <span class="block text-xs uppercase font-bold text-gray-400">Telefono</span>
-                            <span class="text-lg font-bold">+39 391 460 4647</span>
-                        </div>
+                        <span class="font-bold text-lg">+39 391 460 4647</span>
                     </a>
-                    <a href="mailto:pitzaitaly2018@gmail.com" class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
-                        <div class="bg-primary p-3 rounded-xl text-white">
+                    <a href="mailto:pitzaitaly2018@gmail.com" class="flex items-center space-x-4 group">
+                        <div class="p-3 bg-primary/10 text-primary rounded-2xl group-hover:bg-primary group-hover:text-white transition-all">
                             <i data-lucide="mail"></i>
                         </div>
-                        <div>
-                            <span class="block text-xs uppercase font-bold text-gray-400">Email</span>
-                            <span class="text-lg font-bold">pitzaitaly2018@gmail.com</span>
-                        </div>
+                        <span class="font-bold text-lg">pitzaitaly2018@gmail.com</span>
                     </a>
                 </div>
             </div>
-            
-            <form class="space-y-4">
-                <input type="text" placeholder="Nome" class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
-                <input type="email" placeholder="Email" class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
-                <select class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
-                    <option disabled selected>Tipo di evento</option>
-                    <option>Matrimonio</option>
-                    <option>Corporate</option>
-                    <option>Festa Privata</option>
-                    <option>Altro</option>
-                </select>
-                <textarea rows="4" placeholder="Parlaci del tuo evento..." class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all"></textarea>
-                <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-xl hover:shadow-primary/20 hover:-translate-y-1 transition-all uppercase tracking-widest">
->>>>>>> parent of d0b97ce (test 21st.dev)
+
+            <form class="bg-light p-10 rounded-[40px] space-y-4 shadow-inner">
+                <input type="text" placeholder="Nome" class="w-full p-4 bg-white rounded-2xl border-none outline-none focus:ring-2 focus:ring-primary transition-all font-medium">
+                <input type="email" placeholder="Email" class="w-full p-4 bg-white rounded-2xl border-none outline-none focus:ring-2 focus:ring-primary transition-all font-medium">
+                <textarea placeholder="Il tuo evento..." rows="4" class="w-full p-4 bg-white rounded-2xl border-none outline-none focus:ring-2 focus:ring-primary transition-all font-medium resize-none"></textarea>
+                <button class="w-full bg-primary text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
                     Invia Richiesta
                 </button>
             </form>
@@ -405,35 +183,16 @@
     </section>
 
     <!-- Footer -->
-<<<<<<< HEAD
-    <footer class="py-20 px-6 border-t border-border">
-        <div class="max-w-4xl mx-auto flex flex-col items-center space-y-8">
-            <img src="./assets/logo-pitza.png" class="h-8 grayscale opacity-20 hover:opacity-100 transition-opacity">
-            <div class="flex space-x-8 text-[10px] font-bold text-neutral-600 uppercase tracking-widest">
-                <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="hover:text-white transition-colors">Facebook</a>
-                <a href="#" class="hover:text-white transition-colors">Privacy</a>
-            </div>
-            <p class="text-[9px] text-neutral-800 uppercase tracking-tighter">Pitza Italy © 2024 — Designed for Perfection</p>
+    <footer class="py-12 border-t border-gray-100 text-center space-y-8">
+        <img src="./assets/logo-pitza.png" class="h-12 mx-auto">
+        <div class="flex justify-center space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <a href="#" class="hover:text-primary transition-colors">Instagram</a>
+            <a href="#" class="hover:text-primary transition-colors">Facebook</a>
+            <a href="#" class="hover:text-primary transition-colors">Privacy</a>
         </div>
+        <p class="text-[10px] text-gray-300 uppercase font-black tracking-widest">© 2024 Pitza Italy. Tutto il diritto al gusto.</p>
     </footer>
 
-=======
-    <footer class="py-12 border-t border-gray-100 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-8 w-auto grayscale opacity-50">
-            <div class="flex space-x-6 text-gray-400 text-sm">
-                <a href="https://www.instagram.com/pitza.it/" class="hover:text-primary transition-colors">Instagram</a>
-                <a href="https://www.facebook.com/pitzapizzaioliadomicilio" class="hover:text-primary transition-colors">Facebook</a>
-            </div>
-            <p class="text-gray-400 text-xs">© 2024 Pitza Italy. Tutti i diritti riservati.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <!-- Framer Motion for Vanilla JS (Motion) -->
-    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
->>>>>>> parent of d0b97ce (test 21st.dev)
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,96 +1,42 @@
-<<<<<<< HEAD
-/* Oryzo.ai Inspired Aesthetic for Pitza */
+/* Pitza Light & Clean - Styles */
 
 :root {
     --primary: #FF3B30;
-    --dark: #000000;
+    --dark: #1A1A1A;
+    --light: #F9F9F9;
 }
 
-body {
-    background-color: var(--dark);
-    font-family: 'Inter', sans-serif;
+/* No scrollbar utility for the gallery */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Reveal Items Animation */
-.reveal-item {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-item.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-=======
-/* Custom styles for Pitza Modern */
-
-:root {
-    --primary: #FF0000;
-    --secondary: #1A1A1A;
-    --accent: #61CE70;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3, .font-serif {
-    font-family: 'Playfair Display', serif;
-}
-
-/* Floating animation for hero image */
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-}
-
-.floating {
-    animation: float 6s ease-in-out infinite;
-}
-
-/* Glassmorphism Navbar effect on scroll */
-.nav-scrolled {
+/* Navbar shadow on scroll */
+.nav-shadow {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
 }
 
-.nav-scrolled > div {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    border-color: rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1) !important;
+/* Event Block specific animations */
+.event-block img {
+    transform: scale(1.05);
+    transition: all 0.7s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
+.event-block:hover img {
+    transform: scale(1.15);
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #d40000;
-}
-
->>>>>>> parent of d0b97ce (test 21st.dev)
-/* Section transitions */
+/* Section Reveal */
 section {
     opacity: 0;
     transform: translateY(30px);
-<<<<<<< HEAD
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-=======
-    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
->>>>>>> parent of d0b97ce (test 21st.dev)
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
 section.is-visible {
@@ -98,44 +44,7 @@ section.is-visible {
     transform: translateY(0);
 }
 
-<<<<<<< HEAD
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: var(--dark);
-}
-::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
-
-/* Input Styles */
-input::placeholder, textarea::placeholder {
-    color: #333;
-}
-
-/* Hover effects on cards */
-.group:hover {
-    box-shadow: 0 0 40px -10px rgba(255, 59, 48, 0.1);
-=======
-/* Bento Grid Hover Effects */
-.bento-card {
-    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.bento-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 3.5rem !important;
-    }
->>>>>>> parent of d0b97ce (test 21st.dev)
+/* Smooth horizontal scroll for gallery */
+#gallery-slider {
+    scroll-behavior: smooth;
 }
