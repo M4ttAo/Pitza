@@ -1,62 +1,75 @@
-/* Pitza Modern - 21st.dev Interactions */
+/* Pitza Liquid Elegance - Scripts */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Staggered Hero Animation
-    setTimeout(() => {
-        const heroContent = document.querySelector('.reveal-text');
-        if (heroContent) heroContent.classList.add('active');
-    }, 100);
-
-    // Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.style.transform = 'translateY(-10px) scale(0.95)';
-            navbar.querySelector('div').classList.add('bg-black/80');
-        } else {
-            navbar.style.transform = 'translateY(0) scale(1)';
-            navbar.querySelector('div').classList.remove('bg-black/80');
-        }
+    // Staggered Hero Reveal
+    const heroElements = ['.hero-title', '.hero-sub', '.hero-cta'];
+    heroElements.forEach((el, index) => {
+        setTimeout(() => {
+            document.querySelector(el).classList.add('active');
+        }, 200 * index + 300);
     });
 
-    // Intersection Observer for Sections
-    const sections = document.querySelectorAll('section');
+    // Intersection Observer for Section Reveal
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('is-visible');
             }
         });
-    }, { threshold: 0.15 });
+    }, observerOptions);
 
-    sections.forEach(section => {
+    document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
 
-    // Mouse Spotlight Effect (Optional for performance)
-    const grid = document.body;
-    grid.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        // Optional: Update a CSS variable for a spotlight effect
-        // document.documentElement.style.setProperty('--mouse-x', `${x}px`);
-        // document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+    // Navbar Scroll Refinement
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.paddingTop = '1rem';
+            navbar.style.paddingBottom = '1rem';
+            navbar.querySelector('div').style.backgroundColor = 'rgba(15, 15, 15, 0.7)';
+        } else {
+            navbar.style.paddingTop = '2rem';
+            navbar.style.paddingBottom = '2rem';
+            navbar.querySelector('div').style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+        }
     });
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+    // Parallax effect on pizza (optional, smooth)
+    const pizzaImg = document.querySelector('.hero-img-wrap');
+    window.addEventListener('scroll', () => {
+        const speed = 0.05;
+        const yPos = window.scrollY * speed;
+        if (pizzaImg) {
+            pizzaImg.style.transform = `translateY(${yPos}px)`;
+        }
     });
+
+    // Simple Form Validation Feedback
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Richiesta Inviata';
+            btn.style.backgroundColor = '#10B981'; // Success Green
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = '';
+                form.reset();
+            }, 3000);
+        });
+    }
 });
