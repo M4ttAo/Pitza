@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pitza | High-End Pizza Catering</title>
+    <title>Pitza | Modern Pizza Excellence</title>
     
     <!-- Modern Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,9 +18,9 @@
                 extend: {
                     colors: {
                         primary: '#FF3B30',
-                        dark: '#000000',
-                        card: '#0A0A0A',
-                        border: '#1F1F1F'
+                        dark: '#1A1A1A',
+                        light: '#F5F5F7',
+                        border: '#E5E5E7'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -34,17 +34,17 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark text-white antialiased selection:bg-primary/30">
+<body class="bg-white text-dark antialiased selection:bg-primary/20">
 
-    <!-- Oryzo-Style Background Pattern -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none">
-        <div class="absolute inset-0 bg-[radial-gradient(#1f1f1f_1px,transparent_1px)] [background-size:32px_32px] opacity-30"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-primary/5 blur-[120px]"></div>
+    <!-- Modern Background: Subtle Dot Grid -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#e5e5e7_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-primary/[0.03] blur-[100px]"></div>
     </div>
 
     <!-- Sticky Navbar -->
     <nav id="navbar" class="fixed top-0 w-full z-50 px-6 py-6 transition-all duration-500">
-        <div class="max-w-6xl mx-auto flex justify-between items-center bg-card/60 backdrop-blur-xl border border-border rounded-3xl px-6 py-3 shadow-2xl">
+        <div class="max-w-6xl mx-auto flex justify-between items-center bg-white/70 backdrop-blur-xl border border-border rounded-[24px] px-6 py-3 shadow-sm">
             <!-- Logo Left -->
             <a href="#" class="flex items-center">
                 <img src="./assets/logo-pitza.png" alt="Logo Pitza" class="h-10 md:h-12 w-auto transition-transform hover:scale-105">
@@ -52,18 +52,17 @@
             
             <!-- Links & WhatsApp Right -->
             <div class="hidden md:flex items-center space-x-10">
-                <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-neutral-500">
-                    <a href="#chi-siamo" class="hover:text-white transition-colors">Vision</a>
-                    <a href="#eventi" class="hover:text-white transition-colors">Format</a>
-                    <a href="#gallery" class="hover:text-white transition-colors">Gallery</a>
+                <div class="flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
+                    <a href="#chi-siamo" class="hover:text-primary transition-colors">Chi Siamo</a>
+                    <a href="#eventi" class="hover:text-primary transition-colors">Format</a>
+                    <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
                 </div>
-                <a href="https://wa.me/+393914604647" target="_blank" class="bg-primary text-white px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-primary/20 flex items-center space-x-2">
+                <a href="https://wa.me/+393914604647" target="_blank" class="bg-primary text-white px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-dark transition-all shadow-lg shadow-primary/10 flex items-center space-x-2">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     <span>WhatsApp</span>
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
             <button class="md:hidden text-primary">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
@@ -75,124 +74,118 @@
         <div class="max-w-4xl mx-auto space-y-12">
             <!-- Hero Logo -->
             <div class="hero-logo-container mb-4">
-                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-32 md:h-48 mx-auto drop-shadow-[0_0_30px_rgba(255,59,48,0.2)] reveal-item">
+                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-32 md:h-44 mx-auto drop-shadow-2xl reveal-item">
             </div>
 
             <div class="space-y-6">
-                <h1 class="text-6xl md:text-[100px] font-extrabold tracking-tighter leading-none reveal-item">
-                    PIZZA <span class="bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent">CATERING.</span><br>
-                    <span class="text-primary italic">REDEFINED.</span>
+                <h1 class="text-6xl md:text-[90px] font-black tracking-tighter leading-[0.9] reveal-item">
+                    AUTHENTIC <br> <span class="text-primary italic">PIZZA TECH.</span>
                 </h1>
                 <p class="text-lg text-neutral-500 font-medium max-w-xl mx-auto leading-relaxed reveal-item">
-                    Integrazione perfetta tra maestria napoletana e design moderno. Portiamo l'eccellenza direttamente nel cuore del tuo evento.
+                    Abbiamo evoluto il catering tradizionale in un'esperienza di design. Forno mobile, show cooking e precisione napoletana.
                 </p>
             </div>
 
             <div class="pt-6 reveal-item">
-                <a href="#contatti" class="inline-block bg-white text-black px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all shadow-2xl">
+                <a href="#contatti" class="inline-block bg-dark text-white px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-primary transition-all shadow-xl">
                     Richiedi Preventivo
                 </a>
             </div>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-20">
-            <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
-        </div>
     </section>
 
-    <!-- I Nostri Format (Bento Style with Modals) -->
-    <section id="eventi" class="py-40 px-6">
+    <!-- Bento Format Section -->
+    <section id="eventi" class="py-40 px-6 bg-light/50">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-5xl font-extrabold tracking-tight mb-4 text-white">I NOSTRI FORMAT.</h2>
-                <div class="h-1 w-20 bg-primary mx-auto"></div>
+                <span class="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">I Nostri Sistemi</span>
+                <h2 class="text-5xl font-black tracking-tighter text-dark">FORMAT D'ECCELLENZA.</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <!-- Matrimoni Large Card -->
-                <div onclick="openModal('matrimoni')" class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-card border border-border h-[500px] cursor-pointer transition-all hover:border-primary/50">
-                    <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    <div class="absolute inset-0 p-12 flex flex-col justify-end">
-                        <h3 class="text-5xl font-extrabold mb-4 italic text-white">MATRIMONI</h3>
-                        <p class="text-neutral-400 max-w-sm text-sm">Eleganza e tradizione per il tuo giorno più bello. <span class="text-primary font-bold">Leggi di più +</span></p>
+                <!-- Matrimoni -->
+                <div onclick="openModal('matrimoni')" class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-white border border-border h-[500px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
+                    <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent p-12 flex flex-col justify-end">
+                        <h3 class="text-4xl font-black mb-4 italic text-dark">MATRIMONI</h3>
+                        <p class="text-neutral-500 max-w-sm text-sm font-medium">L'eleganza incontra il sapore. <span class="text-primary font-bold">Esplora +</span></p>
                     </div>
                 </div>
                 
-                <!-- Aziendali Card -->
-                <div onclick="openModal('aziendali')" class="md:col-span-4 group relative overflow-hidden rounded-[40px] bg-card border border-border p-10 flex flex-col justify-between h-[500px] cursor-pointer transition-all hover:border-primary/50">
-                    <div class="bg-primary/10 w-16 h-16 rounded-3xl flex items-center justify-center">
+                <!-- Aziendali -->
+                <div onclick="openModal('aziendali')" class="md:col-span-4 group relative overflow-hidden rounded-[40px] bg-white border border-border p-10 flex flex-col justify-between h-[500px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
+                    <div class="bg-primary/5 w-16 h-16 rounded-3xl flex items-center justify-center">
                         <i data-lucide="briefcase" class="text-primary w-8 h-8"></i>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-extrabold mb-4 uppercase italic tracking-tighter text-white">Corporate</h3>
-                        <p class="text-neutral-500 text-xs font-bold uppercase tracking-widest leading-loose">Launch party & team building.</p>
-                        <span class="text-primary font-bold text-xs mt-4 block">Scopri il format +</span>
+                        <h3 class="text-3xl font-black mb-4 uppercase italic tracking-tighter">Corporate</h3>
+                        <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-loose">Precisione e Brand Identity.</p>
+                        <span class="text-primary font-bold text-xs mt-4 block">Dettagli sistema +</span>
                     </div>
                 </div>
 
-                <!-- Privati Card -->
-                <div onclick="openModal('privati')" class="md:col-span-12 group relative overflow-hidden rounded-[40px] bg-white text-black p-12 flex flex-col md:flex-row justify-between items-center h-auto md:h-[300px] cursor-pointer transition-all">
+                <!-- Privati -->
+                <div onclick="openModal('privati')" class="md:col-span-12 group relative overflow-hidden rounded-[40px] bg-primary text-white p-12 flex flex-col md:flex-row justify-between items-center h-auto md:h-[280px] cursor-pointer transition-all shadow-xl shadow-primary/10">
                     <div class="text-center md:text-left mb-8 md:mb-0">
-                        <h3 class="text-4xl font-extrabold mb-2 italic">FESTE PRIVATE</h3>
-                        <p class="text-black/60 max-w-md">Portiamo la pizzeria nel tuo giardino o location preferita.</p>
+                        <h3 class="text-4xl font-black mb-2 italic tracking-tighter">PRIVATE EVENTS</h3>
+                        <p class="text-white/80 max-w-md font-medium">L'atmosfera di Pitza, ovunque tu desideri.</p>
                     </div>
-                    <div class="bg-primary text-white px-10 py-5 rounded-3xl font-black text-xs uppercase tracking-widest group-hover:bg-black transition-colors">
-                        Leggi Dettagli
+                    <div class="bg-white text-primary px-10 py-5 rounded-3xl font-black text-xs uppercase tracking-widest group-hover:bg-dark group-hover:text-white transition-all">
+                        Scopri di più
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery (Horizontal Scroller) -->
-    <section id="gallery" class="py-40 bg-neutral-900/50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end gap-8 text-white">
-            <h2 class="text-6xl font-extrabold tracking-tighter">MOOD <span class="text-primary">GALLERY.</span></h2>
+    <!-- Gallery Scroller -->
+    <section id="gallery" class="py-40 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
+            <h2 class="text-6xl font-black tracking-tighter">MOOD <span class="text-primary italic">BOARD.</span></h2>
             <div class="flex space-x-3">
-                <button id="prev" class="p-5 bg-card border border-border rounded-full hover:bg-primary transition-all"><i data-lucide="chevron-left"></i></button>
-                <button id="next" class="p-5 bg-card border border-border rounded-full hover:bg-primary transition-all"><i data-lucide="chevron-right"></i></button>
+                <button id="prev" class="p-5 bg-light border border-border rounded-full hover:bg-primary hover:text-white transition-all"><i data-lucide="chevron-left"></i></button>
+                <button id="next" class="p-5 bg-light border border-border rounded-full hover:bg-primary hover:text-white transition-all"><i data-lucide="chevron-right"></i></button>
             </div>
         </div>
         
         <div id="gallery-slider" class="flex space-x-6 px-6 overflow-x-auto snap-x no-scrollbar pb-10">
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border">
+            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border">
+            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border">
+            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border">
+            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
 
     <!-- Contatti -->
-    <section id="contatti" class="py-40 px-6">
+    <section id="contatti" class="py-40 px-6 bg-light/30">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-24 items-center">
             <div class="space-y-12">
-                <h2 class="text-7xl font-extrabold tracking-tighter italic text-white">START THE <br>ENGINE.</h2>
+                <h2 class="text-7xl font-black tracking-tighter italic text-dark">GET IN <br>TOUCH.</h2>
                 <div class="space-y-6">
-                    <p class="flex items-center space-x-4 text-neutral-400">
-                        <i data-lucide="mail" class="text-primary"></i>
-                        <span class="font-bold">pitzaitaly2018@gmail.com</span>
+                    <p class="flex items-center space-x-4 text-neutral-500">
+                        <i data-lucide="mail" class="text-primary w-5 h-5"></i>
+                        <span class="font-bold text-lg">pitzaitaly2018@gmail.com</span>
                     </p>
-                    <p class="flex items-center space-x-4 text-neutral-400">
-                        <i data-lucide="phone" class="text-primary"></i>
-                        <span class="font-bold">+39 391 460 4647</span>
+                    <p class="flex items-center space-x-4 text-neutral-500">
+                        <i data-lucide="phone" class="text-primary w-5 h-5"></i>
+                        <span class="font-bold text-lg">+39 391 460 4647</span>
                     </p>
                 </div>
             </div>
 
-            <form class="bg-card border border-border p-12 rounded-[50px] space-y-6 shadow-2xl">
-                <input type="text" placeholder="Identity" class="w-full bg-transparent border-b border-border py-4 outline-none focus:border-primary transition-all font-medium text-xl text-white">
-                <input type="email" placeholder="Communication" class="w-full bg-transparent border-b border-border py-4 outline-none focus:border-primary transition-all font-medium text-xl text-white">
-                <textarea placeholder="Event Details..." class="w-full bg-transparent border-b border-border py-4 outline-none focus:border-primary transition-all font-medium text-xl h-32 resize-none text-white"></textarea>
-                <button class="w-full bg-primary text-white py-6 rounded-3xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            <form class="bg-white border border-border p-12 rounded-[50px] space-y-6 shadow-xl">
+                <input type="text" placeholder="Nome" class="w-full bg-light/50 border-b border-border py-4 outline-none focus:border-primary transition-all font-semibold text-xl">
+                <input type="email" placeholder="Email" class="w-full bg-light/50 border-b border-border py-4 outline-none focus:border-primary transition-all font-semibold text-xl">
+                <textarea placeholder="Raccontaci il tuo evento..." class="w-full bg-light/50 border-b border-border py-4 outline-none focus:border-primary transition-all font-semibold text-xl h-32 resize-none"></textarea>
+                <button class="w-full bg-dark text-white py-6 rounded-3xl font-black text-xs uppercase tracking-widest hover:bg-primary transition-all shadow-lg">
                     Invia Richiesta
                 </button>
             </form>
@@ -200,24 +193,24 @@
     </section>
 
     <!-- Modal Layout -->
-    <div id="modal-overlay" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden flex items-center justify-center p-6">
+    <div id="modal-overlay" class="fixed inset-0 z-[100] bg-dark/80 backdrop-blur-md hidden flex items-center justify-center p-6">
         <button onclick="closeModal()" class="absolute top-10 right-10 text-white hover:text-primary transition-colors">
             <i data-lucide="x" class="w-10 h-10"></i>
         </button>
-        <div id="modal-content" class="max-w-4xl w-full bg-card border border-border rounded-[60px] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scale">
+        <div id="modal-content" class="max-w-4xl w-full bg-white rounded-[60px] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scale">
             <!-- Content Injected by JS -->
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="py-20 border-t border-border text-center space-y-12">
-        <img src="./assets/logo-pitza.png" class="h-10 mx-auto grayscale opacity-20 hover:opacity-100 transition-opacity">
-        <div class="flex justify-center space-x-10 text-[10px] font-bold text-neutral-600 uppercase tracking-[0.3em]">
+    <footer class="py-20 border-t border-border text-center space-y-12 bg-white">
+        <img src="./assets/logo-pitza.png" class="h-12 mx-auto transition-transform hover:scale-110">
+        <div class="flex justify-center space-x-12 text-[10px] font-bold text-neutral-400 uppercase tracking-[0.4em]">
             <a href="#" class="hover:text-primary transition-colors">Instagram</a>
             <a href="#" class="hover:text-primary transition-colors">Facebook</a>
             <a href="#" class="hover:text-primary transition-colors">Privacy</a>
         </div>
-        <p class="text-[9px] text-neutral-800 uppercase font-black tracking-widest">© 2024 PITZA ITALY — SYSTEMS FOR EXCELLENCE</p>
+        <p class="text-[9px] text-neutral-300 uppercase font-black tracking-[0.2em]">© 2024 PITZA ITALY — MODERN PIZZA ENGINEERING</p>
     </footer>
 
     <script src="script.js"></script>

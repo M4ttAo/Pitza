@@ -1,8 +1,8 @@
-/* Pitza Modern Dark - Styles */
+/* Pitza Hybrid Light Modern - Styles */
 
 :root {
     --primary: #FF3B30;
-    --dark: #000000;
+    --dark: #1A1A1A;
 }
 
 /* No scrollbar utility */
@@ -12,18 +12,6 @@
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
-
-/* Section Reveal */
-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Reveal Items Hero */
@@ -40,12 +28,12 @@ section.is-visible {
 
 /* Modal Animation */
 @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.9); }
+    from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
 }
 
 .animate-scale {
-    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Gallery Slider */
@@ -54,17 +42,25 @@ section.is-visible {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Custom Scrollbar for the site */
-::-webkit-scrollbar {
-    width: 6px;
+/* Navbar shadow on scroll logic */
+.nav-scrolled {
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+    background-color: rgba(255, 255, 255, 0.9) !important;
 }
-::-webkit-scrollbar-track {
-    background: #000;
+
+/* Section transitions */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-::-webkit-scrollbar-thumb {
-    background: #1f1f1f;
-    border-radius: 10px;
+
+section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
+
+/* Card hover glow */
+.group:hover {
+    box-shadow: 0 20px 40px -20px rgba(255, 59, 48, 0.15);
 }
