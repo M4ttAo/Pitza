@@ -1,4 +1,4 @@
-/* Pitza Explosive 3D - Styles */
+/* Pitza Explosive 3D Assets - Styles */
 
 :root {
     --primary: #FF3B30;
@@ -6,52 +6,50 @@
 }
 
 body {
-    scroll-behavior: smooth;
     background-color: #fff;
+    scroll-behavior: smooth;
 }
 
-/* 3D Ingredients Styling */
-.ingredient {
+/* Floating Background Ingredients */
+.floating-item {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: transform 0.1s linear, opacity 0.5s ease;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+    transition: transform 0.1s linear, opacity 0.4s ease;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+    pointer-events: none;
 }
 
-/* Main Pizza Floating Animation */
-@keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-}
-.main-pizza {
-    animation: float 6s ease-in-out infinite;
-    transition: transform 0.2s ease-out, opacity 0.5s;
+/* Pizza Core */
+#pizza-whole, #pizza-exploded {
+    will-change: transform, opacity;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.2));
 }
 
-/* Modal and Gallery common styles */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-#gallery-slider { scroll-behavior: smooth; }
-
-/* Section Reveals */
+/* Section Transitions */
 section {
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 section.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Modal Animation */
+/* Layout Utilities */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+#gallery-slider { scroll-behavior: smooth; }
+
+/* Modal Scale Animation */
 @keyframes scaleIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
 .animate-scale {
     animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Text Stroke Effect (optional) */
+.text-stroke {
+    -webkit-text-stroke: 1px var(--primary);
 }
