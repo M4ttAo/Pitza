@@ -1,0 +1,14 @@
+# Agent configs
+.codex/
+.gemini/
+.claude/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.log
+tmp/
