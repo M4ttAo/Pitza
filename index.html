@@ -70,24 +70,24 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[75vh] flex flex-col items-center justify-center pt-32 px-6 text-center">
-        <div class="max-w-4xl mx-auto space-y-12">
+    <section class="relative min-h-[85vh] md:h-[75vh] flex flex-col items-center justify-center pt-40 md:pt-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto space-y-8 md:space-y-12">
             <!-- Hero Logo -->
             <div class="hero-logo-container mb-4">
-                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-32 md:h-44 mx-auto drop-shadow-2xl reveal-item">
+                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-24 md:h-44 mx-auto drop-shadow-2xl reveal-item">
             </div>
 
             <div class="space-y-6">
-                <h1 class="text-6xl md:text-[90px] font-black tracking-tighter leading-[0.9] reveal-item">
+                <h1 class="text-5xl md:text-[90px] font-black tracking-tighter leading-[0.9] reveal-item">
                     AUTHENTIC <br> <span class="text-primary italic">PIZZA TECH.</span>
                 </h1>
-                <p class="text-lg text-neutral-500 font-medium max-w-xl mx-auto leading-relaxed reveal-item">
+                <p class="text-base md:text-lg text-neutral-500 font-medium max-w-xl mx-auto leading-relaxed reveal-item">
                     Abbiamo evoluto il catering tradizionale in un'esperienza di design. Forno mobile, show cooking e precisione napoletana.
                 </p>
             </div>
 
-            <div class="pt-6 reveal-item">
-                <a href="#contatti" class="inline-block bg-dark text-white px-12 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-primary transition-all shadow-xl">
+            <div class="pt-6 reveal-item pb-12">
+                <a href="#contatti" class="inline-block bg-dark text-white px-10 md:px-12 py-4 md:py-5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-primary transition-all shadow-xl">
                     Richiedi Preventivo
                 </a>
             </div>
@@ -286,11 +286,11 @@
     </section>
 
     <!-- Modal Layout -->
-    <div id="modal-overlay" class="fixed inset-0 z-[100] bg-dark/80 backdrop-blur-md hidden flex items-center justify-center p-6">
-        <button onclick="closeModal()" class="absolute top-10 right-10 text-white hover:text-primary transition-colors">
-            <i data-lucide="x" class="w-10 h-10"></i>
-        </button>
-        <div id="modal-content" class="max-w-4xl w-full bg-white rounded-[60px] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scale">
+    <div id="modal-overlay" class="fixed inset-0 z-[100] bg-dark/80 backdrop-blur-md hidden flex items-start justify-center p-4 md:p-6 overflow-y-auto">
+        <div id="modal-content" class="relative max-w-4xl w-full bg-white rounded-[32px] md:rounded-[60px] overflow-hidden shadow-2xl flex flex-col md:flex-row animate-scale my-10">
+            <button onclick="closeModal()" class="absolute top-6 right-6 z-10 text-dark md:text-white bg-white/80 md:bg-transparent p-2 rounded-full hover:text-primary transition-colors">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
             <!-- Content Injected by JS -->
         </div>
     </div>
