@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Icona Pitza</title>
+  <desc id="desc">Monogramma rosso e verde ispirato al brand Pitza.</desc>
+  <rect width="128" height="128" rx="28" fill="#fffdf9"/>
+  <circle cx="64" cy="64" r="44" fill="#18362e"/>
+  <path d="M46 34h22c18 0 30 10 30 26s-12 26-30 26H58v16H46V34zm20 42c12 0 20-5 20-16s-8-16-20-16H58v32h8z" fill="#fffdf9"/>
+  <circle cx="92" cy="38" r="10" fill="#a92d2a"/>
+</svg>

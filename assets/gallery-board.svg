@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder gallery board</title>
+  <desc id="desc">Composizione con tavolozza brand, pizza e blocchi foto per la gallery.</desc>
+  <rect width="1200" height="900" rx="56" fill="#f7f1e7"/>
+  <rect x="84" y="84" width="1032" height="732" rx="40" fill="#fffdf9"/>
+  <rect x="142" y="142" width="304" height="276" rx="28" fill="#18362e"/>
+  <rect x="474" y="142" width="584" height="176" rx="28" fill="#a92d2a"/>
+  <rect x="474" y="346" width="274" height="320" rx="28" fill="#efe5d6"/>
+  <rect x="776" y="346" width="282" height="320" rx="28" fill="#d8c2aa"/>
+  <circle cx="294" cy="560" r="170" fill="#e8b35f"/>
+  <circle cx="294" cy="560" r="130" fill="#f1c27c"/>
+  <g fill="#a92d2a">
+    <circle cx="244" cy="514" r="18"/>
+    <circle cx="334" cy="488" r="20"/>
+    <circle cx="376" cy="586" r="17"/>
+    <circle cx="264" cy="624" r="22"/>
+  </g>
+  <g fill="#18362e">
+    <ellipse cx="342" cy="566" rx="17" ry="9"/>
+    <ellipse cx="236" cy="560" rx="14" ry="8"/>
+    <ellipse cx="286" cy="474" rx="15" ry="8"/>
+  </g>
+</svg>
