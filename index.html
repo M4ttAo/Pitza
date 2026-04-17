@@ -1,281 +1,239 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pitza | Pizza Napoletana per Eventi, Matrimoni e Feste Private</title>
-  <meta name="description" content="Pitza porta la vera pizza napoletana a matrimoni, eventi aziendali, lauree e feste private con forno mobile, show cooking e ingredienti di qualità.">
-  <meta name="keywords" content="Pitza, pizza napoletana eventi, catering pizza matrimoni, pizzaiolo a domicilio, pizza per feste private, eventi aziendali">
-  <meta name="author" content="Pitza">
-  <meta name="theme-color" content="#FF0000">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="it_IT">
-  <meta property="og:title" content="Pitza | La vera pizza napoletana per i tuoi eventi">
-  <meta property="og:description" content="Matrimoni, corporate, lauree e feste private con pizza live, forno mobile e servizio su misura.">
-  <meta property="og:image" content="./assets/logo-pitza.png">
-  <meta property="og:url" content="https://pitzaitaly.it/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./assets/logo-pitza.png">
-  <link rel="stylesheet" href="./style.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FoodEstablishment",
-      "name": "Pitza",
-      "url": "https://pitzaitaly.it/",
-      "telephone": "+39 391 460 4647",
-      "email": "pitzaitaly2018@gmail.com",
-      "servesCuisine": "Pizza Napoletana",
-      "areaServed": "Nord Italia",
-      "sameAs": [
-        "https://www.instagram.com/pitza.it/",
-        "https://www.facebook.com/pitzapizzaioliadomicilio"
-      ]
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitza | Catering Pizza Napoletana Moderna</title>
+    <meta name="description" content="Esperienza gourmet di pizza napoletana per eventi, matrimoni e corporate. Show cooking e forno mobile professionale.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF0000',
+                        secondary: '#1A1A1A',
+                        accent: '#61CE70',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+<body class="bg-white text-secondary antialiased overflow-x-hidden">
 
-  <header class="site-header">
-    <nav class="navbar shell" aria-label="Navigazione principale">
-      <a class="brand" href="#hero">
-        <img src="./assets/logo-pitza.png" alt="Logo Pitza">
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Apri il menu">
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-panel" id="site-menu">
-        <a href="#chi-siamo">Chi siamo</a>
-        <a href="#eventi">Eventi</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contatti">Contatti</a>
-        <a class="nav-cta" href="https://wa.me/+393914604647" target="_blank" rel="noreferrer">WhatsApp</a>
-      </div>
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/70 backdrop-blur-md border border-white/20 rounded-2xl px-6 py-3 shadow-lg">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-10 w-auto">
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+                <a href="#chi-siamo" class="hover:text-primary transition-colors">Chi Siamo</a>
+                <a href="#servizi" class="hover:text-primary transition-colors">Servizi</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#contatti" class="hover:text-primary transition-colors">Contatti</a>
+            </div>
+            
+            <a href="https://wa.me/+393914604647" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform text-sm">
+                ORDINA ORA
+            </a>
+        </div>
     </nav>
-  </header>
 
-  <main id="contenuto">
-    <section class="hero shell" id="hero">
-      <div class="hero-copy" data-animate>
-        <p class="eyebrow">Pizza napoletana per eventi</p>
-        <h1>Un catering pizza che si vede, si sente e si ricorda.</h1>
-        <p class="lead">
-          Pitza porta forno mobile, impasto a lunga lievitazione e show cooking direttamente nella tua location.
-          Matrimoni, lauree, meeting, inaugurazioni e feste private con un’identità visiva fedele al brand originale.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary magnetic" href="https://wa.me/+393914604647" target="_blank" rel="noreferrer">Ordina ora</a>
-          <a class="button button-secondary" href="#gallery">Guarda le foto</a>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div id="hero-content" class="z-10">
+                <span class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold tracking-widest mb-6 uppercase">
+                    The Real Pizza Experience
+                </span>
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                    PIZZA <br> <span class="text-primary italic">SUL MOMENTO.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
+                    Portiamo l'autentica arte della pizza napoletana direttamente nel tuo evento. Show cooking, forno mobile e ingredienti d'eccellenza.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contatti" class="bg-secondary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary transition-colors text-center">
+                        Richiedi Preventivo
+                    </a>
+                    <a href="#servizi" class="border-2 border-secondary px-8 py-4 rounded-xl font-bold hover:bg-secondary hover:text-white transition-all text-center">
+                        Scopri i Servizi
+                    </a>
+                </div>
+            </div>
+            
+            <div id="hero-image" class="relative">
+                <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+                <img src="./assets/pizza-cutout.png" alt="Pizza Napoletana" class="w-full h-auto drop-shadow-2xl floating">
+            </div>
         </div>
+    </section>
 
-        <div class="hero-strip">
-          <div>
-            <strong>391 460 4647</strong>
-            <span>WhatsApp e telefono</span>
-          </div>
-          <div>
-            <strong>Nord Italia</strong>
-            <span>trasferte su richiesta</span>
-          </div>
-          <div>
-            <strong>Live show</strong>
-            <span>pizza cotta sul momento</span>
-          </div>
+    <!-- Chi Siamo (Whitespace Focus) -->
+    <section id="chi-siamo" class="py-32 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-12">TRADIZIONE <br>IN MOVIMENTO.</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <p class="text-xl leading-relaxed text-gray-700">
+                    Pitza nasce dalla passione per l'accoglienza e l'autenticità. Non siamo un semplice catering, siamo un'esperienza sensoriale che trasforma ogni festa in un momento indimenticabile.
+                </p>
+                <p class="text-xl leading-relaxed text-gray-700">
+                    Con il nostro forno mobile professionale, garantiamo una cottura perfetta e un servizio rapido, mantenendo l'identità visiva e la qualità che ci contraddistinguono.
+                </p>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="hero-media" data-animate>
-        <div class="hero-photo-card">
-          <img src="./assets/gallery-3.jpeg" alt="Evento Pitza con tavoli all'aperto e catering pizza">
-          <div class="hero-badge">
-            <img src="./assets/pizza-cutout.png" alt="Pizza Pitza scontornata">
-          </div>
+    <!-- Servizi (Bento Grid) -->
+    <section id="servizi" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <span class="text-primary font-bold tracking-widest uppercase text-sm">Cosa Facciamo</span>
+                    <h2 class="text-5xl font-black mt-2">I NOSTRI SERVIZI.</h2>
+                </div>
+                <p class="max-w-xs text-gray-500">Soluzioni su misura per ogni tipo di evento, dalla festa privata al grande evento corporate.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+                <!-- Bento Card 1 -->
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl bg-primary shadow-xl">
+                    <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 p-10 flex flex-col justify-end text-white">
+                        <span class="text-xs font-bold uppercase tracking-tighter mb-2">Luxury Events</span>
+                        <h3 class="text-4xl font-black mb-4 leading-none">MATRIMONI <br>& GALA.</h3>
+                        <p class="text-white/80 max-w-xs">Un tocco di classe e tradizione per il tuo giorno più bello. Corner pizza elegante e servizio impeccabile.</p>
+                    </div>
+                </div>
+                
+                <!-- Bento Card 2 -->
+                <div class="md:col-span-2 relative group overflow-hidden rounded-3xl bg-secondary shadow-xl">
+                    <div class="absolute inset-0 p-10 flex flex-col justify-center">
+                        <i data-lucide="briefcase" class="text-primary mb-4 w-10 h-10"></i>
+                        <h3 class="text-2xl font-black text-white mb-2 uppercase">Corporate</h3>
+                        <p class="text-white/60">Meeting aziendali e team building con show cooking live.</p>
+                    </div>
+                </div>
+                
+                <!-- Bento Card 3 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-white border border-gray-100 shadow-xl">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-between">
+                        <i data-lucide="party-popper" class="text-primary w-8 h-8"></i>
+                        <h3 class="text-xl font-bold uppercase">Feste <br>Private</h3>
+                    </div>
+                </div>
+                
+                <!-- Bento Card 4 -->
+                <div class="relative group overflow-hidden rounded-3xl bg-accent shadow-xl">
+                    <div class="absolute inset-0 p-8 flex flex-col justify-between text-white">
+                        <i data-lucide="graduation-cap" class="text-white w-8 h-8"></i>
+                        <h3 class="text-xl font-bold uppercase">Lauree</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="brand-band" data-animate>
-      <div class="shell brand-band-grid">
-        <div class="brand-band-logo">
-          <img src="./assets/logo-pitza.png" alt="Logo Pitza rosso originale">
+    <!-- Gallery -->
+    <section id="gallery" class="py-32 px-6 bg-secondary text-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black mb-16 text-center">MOMENTI REALI.</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-2xl aspect-square">
+                    <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden rounded-2xl aspect-square">
+                    <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden rounded-2xl aspect-square col-span-2 md:col-span-1">
+                    <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
         </div>
-        <div class="brand-band-copy">
-          <p class="eyebrow">Palette originale</p>
-          <h2>Rosso pieno, bianco netto, verde CTA e fotografia reale del servizio.</h2>
-          <p>
-            Dal CSS della home originale risultano come colori dominanti `#FF0000`, `#FF0101`, `#FF0404`, `#f2295b`,
-            `#FFFFFF` e il verde pulsante `#61CE70` per le call to action.
-          </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-5xl font-black mb-8">FACCIAMO <br>FESTA?</h2>
+                <p class="text-xl text-gray-600 mb-12">Raccontaci il tuo evento. Riceverai un preventivo personalizzato in meno di 24 ore.</p>
+                
+                <div class="space-y-6">
+                    <a href="tel:+393914604647" class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                        <div class="bg-primary p-3 rounded-xl text-white">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase font-bold text-gray-400">Telefono</span>
+                            <span class="text-lg font-bold">+39 391 460 4647</span>
+                        </div>
+                    </a>
+                    <a href="mailto:pitzaitaly2018@gmail.com" class="flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                        <div class="bg-primary p-3 rounded-xl text-white">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase font-bold text-gray-400">Email</span>
+                            <span class="text-lg font-bold">pitzaitaly2018@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <form class="space-y-4">
+                <input type="text" placeholder="Nome" class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
+                <input type="email" placeholder="Email" class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
+                <select class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all">
+                    <option disabled selected>Tipo di evento</option>
+                    <option>Matrimonio</option>
+                    <option>Corporate</option>
+                    <option>Festa Privata</option>
+                    <option>Altro</option>
+                </select>
+                <textarea rows="4" placeholder="Parlaci del tuo evento..." class="w-full p-4 bg-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all"></textarea>
+                <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-xl hover:shadow-primary/20 hover:-translate-y-1 transition-all uppercase tracking-widest">
+                    Invia Richiesta
+                </button>
+            </form>
         </div>
-      </div>
     </section>
 
-    <section class="section shell" id="chi-siamo" data-animate>
-      <div class="section-heading">
-        <p class="eyebrow">Chi siamo</p>
-        <h2>Tradizione partenopea, organizzazione pulita e presenza scenica.</h2>
-      </div>
-
-      <div class="split-layout">
-        <article class="text-card main-card">
-          <p>
-            Il sito originale racconta Pitza come un team capace di portare un vero forno napoletano direttamente sul luogo
-            dell’evento. Questa versione mantiene lo stesso posizionamento, ma lo rende più chiaro: qualità ingredienti,
-            impasto autentico, servizio personalizzato e show cooking come elemento distintivo.
-          </p>
-        </article>
-
-        <article class="feature-list">
-          <div>
-            <strong>Forno mobile professionale</strong>
-            <span>Cottura corretta, flusso continuo e setup rapido.</span>
-          </div>
-          <div>
-            <strong>Ingredienti selezionati</strong>
-            <span>Pomodoro, latticini e impasti con focus sulla leggerezza.</span>
-          </div>
-          <div>
-            <strong>Menu su misura</strong>
-            <span>Numero invitati, gusti, spazi e tempi di servizio adattati all’evento.</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="eventi" data-animate>
-      <div class="section-heading">
-        <p class="eyebrow">Eventi</p>
-        <h2>I servizi del sito originale riorganizzati in un percorso più veloce da leggere.</h2>
-      </div>
-
-      <div class="bento-grid">
-        <article class="bento-card bento-photo">
-          <img src="./assets/gallery-2.jpg" alt="Evento matrimonio servito da Pitza">
-          <div class="overlay-copy">
-            <span>Matrimoni</span>
-            <h3>Corner pizza che entra bene anche in location più eleganti.</h3>
-          </div>
-        </article>
-
-        <article class="bento-card">
-          <span class="tag">Privati</span>
-          <h3>Compleanni, battesimi, comunioni, cresime e pensionamenti.</h3>
-          <p>Il format è flessibile e funziona bene in casa, giardino, cascina o sala eventi.</p>
-        </article>
-
-        <article class="bento-card accent">
-          <span class="tag">Corporate</span>
-          <h3>Meeting, workshop, convention, inaugurazioni e team moments.</h3>
-          <p>Una proposta semplice da capire e adatta a ritmi di servizio più serrati.</p>
-        </article>
-
-        <article class="bento-card dark">
-          <span class="tag">Lauree & sport</span>
-          <h3>Situazioni dinamiche, molte persone, pizza calda servita senza frizioni.</h3>
-        </article>
-
-        <article class="bento-card cta-card">
-          <span class="tag">Preventivo</span>
-          <h3>Data, numero ospiti, location e gusti.</h3>
-          <p>Con queste informazioni Pitza può costruire un’offerta rapida e concreta.</p>
-          <a class="button button-green magnetic" href="mailto:pitzaitaly2018@gmail.com">Scrivi ora</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="gallery" data-animate>
-      <div class="section-heading">
-        <p class="eyebrow">Gallery reale</p>
-        <h2>Foto prese direttamente dal sito originale, senza placeholder.</h2>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="gallery-card large">
-          <img src="./assets/gallery-1.jpg" alt="Pizza napoletana Pitza con sfondo brand rosso">
-        </figure>
-        <figure class="gallery-card">
-          <img src="./assets/gallery-2.jpg" alt="Sposi con pizza Pitza durante un matrimonio">
-        </figure>
-        <figure class="gallery-card">
-          <img src="./assets/gallery-3.jpeg" alt="Tavolata durante un evento Pitza">
-        </figure>
-      </div>
-    </section>
-
-    <section class="section shell reviews-section" data-animate>
-      <div class="section-heading">
-        <p class="eyebrow">Recensioni</p>
-        <h2>Nel sito originale la prova sociale arriva da recensioni Facebook e testimonianze dirette.</h2>
-      </div>
-
-      <div class="reviews-grid">
-        <blockquote>
-          <p>“Pizza ottima, ingredienti di altissima qualità e servizio professionale.”</p>
-        </blockquote>
-        <blockquote>
-          <p>“Un’esperienza diversa dal solito, molto scenica e organizzata bene.”</p>
-        </blockquote>
-        <blockquote>
-          <p>“Servizio rapido, prodotto forte e atmosfera perfetta per una festa privata.”</p>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="section contact-wrap" id="contatti" data-animate>
-      <div class="shell contact-layout">
-        <div class="contact-copy">
-          <p class="eyebrow">Contatti reali</p>
-          <h2>Richiedi informazioni o un preventivo personalizzato.</h2>
-          <p>
-            Dal sito originale risultano attivi email, Instagram, Facebook, telefono e WhatsApp. Ho riusato questi riferimenti
-            anche qui per rendere la pagina subito utilizzabile.
-          </p>
-          <ul class="contact-list">
-            <li><strong>Telefono:</strong> <a href="tel:+393914604647">+39 391 460 4647</a></li>
-            <li><strong>Email:</strong> <a href="mailto:pitzaitaly2018@gmail.com">pitzaitaly2018@gmail.com</a></li>
-            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/pitza.it/" target="_blank" rel="noreferrer">@pitza.it</a></li>
-            <li><strong>Facebook:</strong> <a href="https://www.facebook.com/pitzapizzaioliadomicilio" target="_blank" rel="noreferrer">pagina ufficiale</a></li>
-          </ul>
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-100 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <img src="./assets/logo-pitza.png" alt="Pitza Logo" class="h-8 w-auto grayscale opacity-50">
+            <div class="flex space-x-6 text-gray-400 text-sm">
+                <a href="https://www.instagram.com/pitza.it/" class="hover:text-primary transition-colors">Instagram</a>
+                <a href="https://www.facebook.com/pitzapizzaioliadomicilio" class="hover:text-primary transition-colors">Facebook</a>
+            </div>
+            <p class="text-gray-400 text-xs">© 2024 Pitza Italy. Tutti i diritti riservati.</p>
         </div>
+    </footer>
 
-        <form class="contact-form">
-          <label>
-            Nome
-            <input type="text" name="nome" placeholder="Il tuo nome">
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="La tua email">
-          </label>
-          <label>
-            Cellulare
-            <input type="tel" name="telefono" placeholder="Il tuo numero">
-          </label>
-          <label>
-            Messaggio
-            <textarea name="messaggio" rows="5" placeholder="Descrivi il tuo evento"></textarea>
-          </label>
-          <button class="button button-primary magnetic" type="submit">Invia richiesta</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <img src="./assets/logo-pitza.png" alt="Logo Pitza">
-      <p>Pitza. Pizza napoletana per eventi, matrimoni, corporate e feste private.</p>
-    </div>
-  </footer>
-
-  <script type="module" src="./script.js"></script>
+    <!-- Scripts -->
+    <!-- Framer Motion for Vanilla JS (Motion) -->
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

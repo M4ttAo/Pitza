@@ -1,61 +1,76 @@
-import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@12.23.24/+esm";
+/* Pitza Modern - Scripts */
 
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const menuToggle = document.querySelector(".menu-toggle");
-const navPanel = document.querySelector(".nav-panel");
-const navLinks = document.querySelectorAll(".nav-panel a");
-const magneticButtons = document.querySelectorAll(".magnetic");
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons
+    lucide.createIcons();
 
-if (menuToggle && navPanel) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navPanel.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navPanel.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
     });
-  });
-}
 
-if (!prefersReducedMotion) {
-  animate(".site-header", { y: [-18, 0], opacity: [0, 1] }, { duration: 0.55, easing: "ease-out" });
-  animate(".hero-copy > *", { y: [26, 0], opacity: [0, 1] }, { delay: stagger(0.07), duration: 0.58, easing: "ease-out" });
-  animate(".hero-photo-card", { scale: [0.98, 1], opacity: [0, 1] }, { duration: 0.7, delay: 0.15, easing: "ease-out" });
-  animate(".hero-badge", { rotate: [-6, 0], opacity: [0, 1] }, { duration: 0.7, delay: 0.32, easing: "ease-out" });
+    // Intersection Observer for section reveal
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-  inView("[data-animate]", (element) => {
-    animate(element, { opacity: [0, 1], y: [26, 0] }, { duration: 0.58, easing: "ease-out" });
-  }, { margin: "0px 0px -10% 0px" });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
 
-  magneticButtons.forEach((button) => {
-    button.addEventListener("pointerenter", () => {
-      animate(button, { scale: 1.02, y: -2 }, { duration: 0.18, easing: "ease-out" });
+    sections.forEach(section => {
+        observer.observe(section);
     });
-    button.addEventListener("pointerleave", () => {
-      animate(button, { scale: 1, y: 0 }, { duration: 0.18, easing: "ease-out" });
+
+    // Animation for Bento Cards on hover (Magnetic effect)
+    const bentoCards = document.querySelectorAll('.bento-card');
+    bentoCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = card.getBoundingClientRect();
+            const x = (e.clientX - left) / width - 0.5;
+            const y = (e.clientY - top) / height - 0.5;
+            
+            card.style.transform = `translateY(-5px) rotateX(${y * 10}deg) rotateY(${x * 10}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `translateY(0) rotateX(0) rotateY(0)`;
+        });
     });
-  });
-} else {
-  document.querySelectorAll("[data-animate]").forEach((element) => {
-    element.style.opacity = "1";
-    element.style.transform = "none";
-  });
-}
 
-document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const button = event.currentTarget.querySelector("button[type='submit']");
-
-  if (!button) {
-    return;
-  }
-
-  button.textContent = "Richiesta pronta";
-
-  if (!prefersReducedMotion) {
-    animate(button, { scale: [1, 1.03, 1] }, { duration: 0.28, easing: "ease-out" });
-  }
+    // Handle Form Submission (Mock)
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = contactForm.querySelector('button');
+            const originalText = button.innerText;
+            
+            button.innerText = 'INVIATO!';
+            button.classList.replace('bg-primary', 'bg-accent');
+            
+            setTimeout(() => {
+                button.innerText = originalText;
+                button.classList.replace('bg-accent', 'bg-primary');
+                contactForm.reset();
+            }, 3000);
+        });
+    }
 });
+
+/* 
+   Note on Framer Motion: 
+   In this static context, we use the Intersection Observer for section entry. 
+   For more complex path animations or specific element transitions, 
+   we can hook into the 'motion' global if needed.
+*/

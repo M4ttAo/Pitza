@@ -1,24 +1,39 @@
-# Pitza
+# Pitza Modern - Catering Website
 
-Landing page statica pronta per GitHub Pages.
+Sito web modernizzato per **Pitza**, specializzato in catering di pizza napoletana per eventi, matrimoni e corporate.
 
-## Stack
+## Caratteristiche
+- **Design Moderno**: Stile minimalista con bento-grid per i servizi.
+- **Micro-interazioni**: Animazioni magnetiche sulle card e reveal allo scroll.
+- **Performance**: Mobile-first e ottimizzato per caricamento rapido.
+- **Tech Stack**: HTML5, Tailwind CSS, Lucide Icons, Framer Motion (concept).
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/`
+## Deployment su GitHub Pages
+Per caricare il sito online su GitHub Pages:
 
-## Note progetto
+1. Inizializza il repository (se non già fatto):
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: Pitza Modern Website"
+   ```
 
-- Il design usa i colori rilevati dal sito originale: `#FF0000`, `#FF0101`, `#FF0404`, `#f2295b`, `#FFFFFF`, `#61CE70`.
-- Le immagini in `assets/` includono file scaricati dal sito originale `pitzaitaly.it`.
-- Le animazioni sono gestite con `motion` via CDN ESM, quindi non serve build.
+2. Crea un nuovo repository su GitHub e collegalo:
+   ```bash
+   git remote add origin https://github.com/TUO-UTENTE/Pitza.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-## Deploy rapido
+3. Vai nelle **Settings** del repository su GitHub:
+   - Clicca su **Pages** nella barra laterale.
+   - Sotto **Build and deployment**, seleziona il branch `main`.
+   - Clicca **Save**.
 
-```bash
-git add index.html style.css script.js README.md assets
-git commit -m "feat: redesign Pitza website"
-git push origin main
-```
+Il sito sarà disponibile all'indirizzo `https://TUO-UTENTE.github.io/Pitza/`.
+
+## Struttura Progetto
+- `index.html`: Struttura principale e metadati SEO.
+- `style.css`: Stili personalizzati e animazioni CSS.
+- `script.js`: Logica di interazione e reveal.
+- `/assets`: Immagini originali del brand.
