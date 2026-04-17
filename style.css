@@ -1,85 +1,57 @@
-/* Pitza Liquid Elegance Interactive - Styles */
+/* Pitza Explosive 3D - Styles */
 
 :root {
     --primary: #FF3B30;
-    --deep: #0F0F0F;
+    --dark: #1A1A1A;
 }
 
 body {
     scroll-behavior: smooth;
-    background-color: var(--deep);
+    background-color: #fff;
 }
 
-/* Aurora Blobs Animation */
-@keyframes blob-float {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(40px, -60px) scale(1.1); }
-    66% { transform: translate(-30px, 30px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
-}
-
-.blob {
-    animation: blob-float 25s infinite ease-in-out;
-}
-
-.blob-2 { animation-delay: -7s; animation-duration: 30s; }
-.blob-3 { animation-delay: -12s; animation-duration: 20s; }
-
-/* Mask Reveal Animations */
-.hero-title, .hero-sub, .hero-cta, .hero-logo-wrap {
+/* 3D Ingredients Styling */
+.ingredient {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.1s linear, opacity 0.5s ease;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
 }
 
-.hero-title.active { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.hero-sub.active { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
-.hero-cta.active { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
-.hero-logo-wrap.active { opacity: 1; transform: translateY(0); }
-
-/* Floating Service Cards */
-.service-card {
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+/* Main Pizza Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+.main-pizza {
+    animation: float 6s ease-in-out infinite;
+    transition: transform 0.2s ease-out, opacity 0.5s;
 }
 
-.service-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    border-color: rgba(255, 59, 48, 0.3);
-    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
-}
+/* Modal and Gallery common styles */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+#gallery-slider { scroll-behavior: smooth; }
 
-/* Modal Scale Animation */
-@keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.animate-scale {
-    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* No scrollbar utility */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Section Transitions */
+/* Section Reveals */
 section {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 section.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Slider Smoothness */
-#gallery-slider {
-    scroll-behavior: smooth;
+/* Modal Animation */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+.animate-scale {
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
