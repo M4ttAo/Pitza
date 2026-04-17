@@ -1,4 +1,4 @@
-/* Pitza Light & Clean - Styles */
+/* Pitza Vibrant - Styles */
 
 :root {
     --primary: #FF3B30;
@@ -6,7 +6,17 @@
     --light: #F9F9F9;
 }
 
-/* No scrollbar utility for the gallery */
+/* Modal Animation */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale {
+    animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* No scrollbar utility */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
@@ -15,28 +25,11 @@
     scrollbar-width: none;
 }
 
-/* Navbar shadow on scroll */
-.nav-shadow {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-}
-
-/* Event Block specific animations */
-.event-block img {
-    transform: scale(1.05);
-    transition: all 0.7s cubic-bezier(0.2, 1, 0.2, 1);
-}
-
-.event-block:hover img {
-    transform: scale(1.15);
-}
-
-/* Section Reveal */
+/* Section Reveal on scroll */
 section {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 section.is-visible {
@@ -44,7 +37,17 @@ section.is-visible {
     transform: translateY(0);
 }
 
-/* Smooth horizontal scroll for gallery */
+/* Horizontal Scroll Snap */
 #gallery-slider {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Event Block Image scale on hover */
+.event-block img {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s;
+}
+
+.event-block:hover img {
+    transform: scale(1.1);
 }
