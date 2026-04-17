@@ -70,7 +70,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex flex-col items-center justify-center pt-32 px-6 text-center">
+    <section class="relative h-[75vh] flex flex-col items-center justify-center pt-32 px-6 text-center">
         <div class="max-w-4xl mx-auto space-y-12">
             <!-- Hero Logo -->
             <div class="hero-logo-container mb-4">
@@ -94,6 +94,17 @@
         </div>
     </section>
 
+    <!-- Chi Siamo Section -->
+    <section id="chi-siamo" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <span class="text-primary font-black text-[10px] uppercase tracking-[0.4em] block">Il nostro DNA</span>
+            <h2 class="text-5xl font-black tracking-tighter text-dark italic">PASSIONE PER L'INGEGNERIA PIZZAIOLA.</h2>
+            <p class="text-xl text-neutral-500 font-medium leading-relaxed">
+                Pitza non è solo pizza; è un'esperienza sensoriale meticolosamente progettata. Dalla selezione delle farine alla progettazione dei nostri forni mobili, ogni dettaglio è studiato per portare l'eccellenza della vera pizza napoletana ovunque tu sia. La nostra missione è trasformare ogni evento in un momento indimenticabile attraverso lo show cooking e la qualità senza compromessi.
+            </p>
+        </div>
+    </section>
+
     <!-- Bento Format Section -->
     <section id="eventi" class="py-40 px-6 bg-light/50">
         <div class="max-w-6xl mx-auto">
@@ -102,36 +113,31 @@
                 <h2 class="text-5xl font-black tracking-tighter text-dark">FORMAT D'ECCELLENZA.</h2>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Matrimoni -->
-                <div onclick="openModal('matrimoni')" class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-white border border-border h-[500px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
+                <div onclick="openModal('matrimoni')" class="group relative overflow-hidden rounded-[40px] bg-white border border-border h-[450px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
                     <img src="./assets/gallery-2.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent p-12 flex flex-col justify-end">
-                        <h3 class="text-4xl font-black mb-4 italic text-dark">MATRIMONI</h3>
-                        <p class="text-neutral-500 max-w-sm text-sm font-medium">L'eleganza incontra il sapore. <span class="text-primary font-bold">Esplora +</span></p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black mb-2 italic text-white">MATRIMONI</h3>
+                        <p class="text-white/80 text-sm font-medium">L'eleganza incontra il sapore. <span class="text-primary font-bold">Scopri +</span></p>
                     </div>
                 </div>
                 
                 <!-- Aziendali -->
-                <div onclick="openModal('aziendali')" class="md:col-span-4 group relative overflow-hidden rounded-[40px] bg-white border border-border p-10 flex flex-col justify-between h-[500px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
-                    <div class="bg-primary/5 w-16 h-16 rounded-3xl flex items-center justify-center">
-                        <i data-lucide="briefcase" class="text-primary w-8 h-8"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-black mb-4 uppercase italic tracking-tighter">Corporate</h3>
-                        <p class="text-neutral-400 text-[10px] font-bold uppercase tracking-widest leading-loose">Precisione e Brand Identity.</p>
-                        <span class="text-primary font-bold text-xs mt-4 block">Dettagli sistema +</span>
+                <div onclick="openModal('aziendali')" class="group relative overflow-hidden rounded-[40px] bg-white border border-border h-[450px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
+                    <img src="./assets/gallery-1.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black mb-2 italic text-white">CORPORATE</h3>
+                        <p class="text-white/80 text-sm font-medium">Precisione e Brand Identity. <span class="text-primary font-bold">Scopri +</span></p>
                     </div>
                 </div>
 
                 <!-- Privati -->
-                <div onclick="openModal('privati')" class="md:col-span-12 group relative overflow-hidden rounded-[40px] bg-primary text-white p-12 flex flex-col md:flex-row justify-between items-center h-auto md:h-[280px] cursor-pointer transition-all shadow-xl shadow-primary/10">
-                    <div class="text-center md:text-left mb-8 md:mb-0">
-                        <h3 class="text-4xl font-black mb-2 italic tracking-tighter">PRIVATE EVENTS</h3>
-                        <p class="text-white/80 max-w-md font-medium">L'atmosfera di Pitza, ovunque tu desideri.</p>
-                    </div>
-                    <div class="bg-white text-primary px-10 py-5 rounded-3xl font-black text-xs uppercase tracking-widest group-hover:bg-dark group-hover:text-white transition-all">
-                        Scopri di più
+                <div onclick="openModal('privati')" class="group relative overflow-hidden rounded-[40px] bg-white border border-border h-[450px] cursor-pointer transition-all hover:border-primary/30 shadow-sm">
+                    <img src="./assets/gallery-3.jpeg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent p-10 flex flex-col justify-end">
+                        <h3 class="text-3xl font-black mb-2 italic text-white">PRIVATE EVENTS</h3>
+                        <p class="text-white/80 text-sm font-medium">L'atmosfera di Pitza ovunque. <span class="text-primary font-bold">Scopri +</span></p>
                     </div>
                 </div>
             </div>
@@ -148,18 +154,89 @@
             </div>
         </div>
         
-        <div id="gallery-slider" class="flex space-x-6 px-6 overflow-x-auto snap-x no-scrollbar pb-10">
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
+        <div id="gallery-slider" class="flex space-x-6 px-6 overflow-x-auto no-scrollbar pb-10 scroll-smooth snap-inline">
+            <div class="snap-item shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
+            <div class="snap-item shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-2.jpg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
+            <div class="snap-item shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-3.jpeg" class="w-full h-full object-cover">
             </div>
-            <div class="snap-center shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
+            <div class="snap-item shrink-0 w-[80vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[50px] overflow-hidden border border-border shadow-sm">
                 <img src="./assets/gallery-1.jpg" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-32 bg-light/30 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-16">
+            <span class="text-primary font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Feedback</span>
+            <h2 class="text-5xl font-black tracking-tighter">DICONO DI <span class="text-primary italic">NOI.</span></h2>
+        </div>
+        
+        <div class="flex space-x-6 px-6 overflow-x-auto no-scrollbar pb-10 snap-inline">
+            <!-- Review 1 -->
+            <div class="snap-item shrink-0 w-[300px] md:w-[400px] bg-white p-8 rounded-[40px] border border-border shadow-sm space-y-4">
+                <div class="flex text-primary">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-neutral-500 font-medium italic">"Pizza incredibile, il forno mobile è spettacolare! Hanno dato un tocco unico alla nostra festa."</p>
+                <p class="font-black text-xs uppercase tracking-widest text-dark">— Marco B.</p>
+            </div>
+            <!-- Review 2 -->
+            <div class="snap-item shrink-0 w-[300px] md:w-[400px] bg-white p-8 rounded-[40px] border border-border shadow-sm space-y-4">
+                <div class="flex text-primary">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-neutral-500 font-medium italic">"Servizio impeccabile per il nostro evento aziendale. Professionalità e qualità altissima."</p>
+                <p class="font-black text-xs uppercase tracking-widest text-dark">— Giulia S.</p>
+            </div>
+            <!-- Review 3 -->
+            <div class="snap-item shrink-0 w-[300px] md:w-[400px] bg-white p-8 rounded-[40px] border border-border shadow-sm space-y-4">
+                <div class="flex text-primary">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-neutral-500 font-medium italic">"Hanno reso il nostro matrimonio unico. Tutti gli ospiti sono rimasti estasiati dalla pizza."</p>
+                <p class="font-black text-xs uppercase tracking-widest text-dark">— Andrea & Elena</p>
+            </div>
+            <!-- Review 4 -->
+            <div class="snap-item shrink-0 w-[300px] md:w-[400px] bg-white p-8 rounded-[40px] border border-border shadow-sm space-y-4">
+                <div class="flex text-primary">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-neutral-500 font-medium italic">"Qualità degli ingredienti superiore. La vera Napoli a casa tua con un tocco di design."</p>
+                <p class="font-black text-xs uppercase tracking-widest text-dark">— Roberto F.</p>
+            </div>
+            <!-- Review 5 -->
+            <div class="snap-item shrink-0 w-[300px] md:w-[400px] bg-white p-8 rounded-[40px] border border-border shadow-sm space-y-4">
+                <div class="flex text-primary">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-neutral-500 font-medium italic">"Professionali, puntuali e simpaticissimi. Non potevamo chiedere di meglio per il compleanno."</p>
+                <p class="font-black text-xs uppercase tracking-widest text-dark">— Valentina M.</p>
             </div>
         </div>
     </section>

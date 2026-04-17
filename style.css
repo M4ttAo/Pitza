@@ -37,9 +37,17 @@
 }
 
 /* Gallery Slider */
-#gallery-slider {
+#gallery-slider, #testimonials div.flex {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scroll snap for better fluid feel */
+.snap-inline {
+    scroll-snap-type: x mandatory;
+}
+.snap-item {
+    scroll-snap-align: center;
 }
 
 /* Navbar shadow on scroll logic */
