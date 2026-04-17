@@ -1,25 +1,24 @@
 # Pitza
 
-Sito statico responsive pronto per GitHub Pages.
+Landing page statica pronta per GitHub Pages.
 
-## File principali
+## Stack
 
 - `index.html`
 - `style.css`
 - `script.js`
 - `assets/`
 
+## Note progetto
+
+- Il design usa i colori rilevati dal sito originale: `#FF0000`, `#FF0101`, `#FF0404`, `#f2295b`, `#FFFFFF`, `#61CE70`.
+- Le immagini in `assets/` includono file scaricati dal sito originale `pitzaitaly.it`.
+- Le animazioni sono gestite con `motion` via CDN ESM, quindi non serve build.
+
 ## Deploy rapido
 
 ```bash
-git add .
-git commit -m "feat: modernize Pitza landing page"
+git add index.html style.css script.js README.md assets
+git commit -m "feat: redesign Pitza website"
 git push origin main
 ```
-
-## Note
-
-- Il progetto non richiede build step.
-- Le animazioni usano il pacchetto `motion` via CDN ESM.
-- Sostituisci i placeholder in `assets/` con immagini reali ad alta risoluzione mantenendo gli stessi nomi file, oppure aggiorna i path in `index.html`.
-- Per attivare il form collega la sezione contatti a Formspree, Netlify Forms o a un endpoint custom.

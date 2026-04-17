@@ -5,7 +5,6 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navPanel = document.querySelector(".nav-panel");
 const navLinks = document.querySelectorAll(".nav-panel a");
 const magneticButtons = document.querySelectorAll(".magnetic");
-const heroCards = document.querySelectorAll(".float-card");
 
 if (menuToggle && navPanel) {
   menuToggle.addEventListener("click", () => {
@@ -22,25 +21,22 @@ if (menuToggle && navPanel) {
 }
 
 if (!prefersReducedMotion) {
-  animate(".site-header", { y: [ -24, 0 ], opacity: [0, 1] }, { duration: 0.6, easing: "ease-out" });
-  animate(".hero-copy > *", { y: [32, 0], opacity: [0, 1] }, { delay: stagger(0.08), duration: 0.7, easing: "ease-out" });
-  animate(".hero-visual .hero-card", { scale: [0.96, 1], opacity: [0, 1] }, { delay: stagger(0.12), duration: 0.7, easing: "ease-out" });
+  animate(".site-header", { y: [-18, 0], opacity: [0, 1] }, { duration: 0.55, easing: "ease-out" });
+  animate(".hero-copy > *", { y: [26, 0], opacity: [0, 1] }, { delay: stagger(0.07), duration: 0.58, easing: "ease-out" });
+  animate(".hero-photo-card", { scale: [0.98, 1], opacity: [0, 1] }, { duration: 0.7, delay: 0.15, easing: "ease-out" });
+  animate(".hero-badge", { rotate: [-6, 0], opacity: [0, 1] }, { duration: 0.7, delay: 0.32, easing: "ease-out" });
 
   inView("[data-animate]", (element) => {
-    animate(element, { opacity: [0, 1], y: [28, 0] }, { duration: 0.7, easing: "ease-out" });
-  }, { margin: "0px 0px -12% 0px" });
+    animate(element, { opacity: [0, 1], y: [26, 0] }, { duration: 0.58, easing: "ease-out" });
+  }, { margin: "0px 0px -10% 0px" });
 
   magneticButtons.forEach((button) => {
     button.addEventListener("pointerenter", () => {
-      animate(button, { y: -3, scale: 1.02 }, { duration: 0.2, easing: "ease-out" });
+      animate(button, { scale: 1.02, y: -2 }, { duration: 0.18, easing: "ease-out" });
     });
     button.addEventListener("pointerleave", () => {
-      animate(button, { y: 0, scale: 1 }, { duration: 0.2, easing: "ease-out" });
+      animate(button, { scale: 1, y: 0 }, { duration: 0.18, easing: "ease-out" });
     });
-  });
-
-  heroCards.forEach((card) => {
-    animate(card, { y: [0, -10, 0] }, { duration: 4.2, repeat: Infinity, easing: "ease-in-out" });
   });
 } else {
   document.querySelectorAll("[data-animate]").forEach((element) => {
@@ -51,16 +47,15 @@ if (!prefersReducedMotion) {
 
 document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const submitButton = event.currentTarget.querySelector("button[type='submit']");
+  const button = event.currentTarget.querySelector("button[type='submit']");
 
-  if (!submitButton) {
+  if (!button) {
     return;
   }
 
-  submitButton.textContent = "Richiesta pronta";
-  submitButton.setAttribute("aria-live", "polite");
+  button.textContent = "Richiesta pronta";
 
   if (!prefersReducedMotion) {
-    animate(submitButton, { scale: [1, 1.04, 1] }, { duration: 0.35, easing: "ease-out" });
+    animate(button, { scale: [1, 1.03, 1] }, { duration: 0.28, easing: "ease-out" });
   }
 });
