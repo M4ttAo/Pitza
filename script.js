@@ -1,76 +1,62 @@
-/* Pitza Modern - Scripts */
+/* Pitza Modern - 21st.dev Interactions */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Navbar scroll effect
+    // Staggered Hero Animation
+    setTimeout(() => {
+        const heroContent = document.querySelector('.reveal-text');
+        if (heroContent) heroContent.classList.add('active');
+    }, 100);
+
+    // Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('nav-scrolled');
+        if (window.scrollY > 100) {
+            navbar.style.transform = 'translateY(-10px) scale(0.95)';
+            navbar.querySelector('div').classList.add('bg-black/80');
         } else {
-            navbar.classList.remove('nav-scrolled');
+            navbar.style.transform = 'translateY(0) scale(1)';
+            navbar.querySelector('div').classList.remove('bg-black/80');
         }
     });
 
-    // Intersection Observer for section reveal
+    // Intersection Observer for Sections
     const sections = document.querySelectorAll('section');
-    const observerOptions = {
-        threshold: 0.1
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.15 });
 
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // Animation for Bento Cards on hover (Magnetic effect)
-    const bentoCards = document.querySelectorAll('.bento-card');
-    bentoCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const { left, top, width, height } = card.getBoundingClientRect();
-            const x = (e.clientX - left) / width - 0.5;
-            const y = (e.clientY - top) / height - 0.5;
-            
-            card.style.transform = `translateY(-5px) rotateX(${y * 10}deg) rotateY(${x * 10}deg)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = `translateY(0) rotateX(0) rotateY(0)`;
-        });
+    // Mouse Spotlight Effect (Optional for performance)
+    const grid = document.body;
+    grid.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        // Optional: Update a CSS variable for a spotlight effect
+        // document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+        // document.documentElement.style.setProperty('--mouse-y', `${y}px`);
     });
 
-    // Handle Form Submission (Mock)
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const button = contactForm.querySelector('button');
-            const originalText = button.innerText;
-            
-            button.innerText = 'INVIATO!';
-            button.classList.replace('bg-primary', 'bg-accent');
-            
-            setTimeout(() => {
-                button.innerText = originalText;
-                button.classList.replace('bg-accent', 'bg-primary');
-                contactForm.reset();
-            }, 3000);
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
-    }
+    });
 });
-
-/* 
-   Note on Framer Motion: 
-   In this static context, we use the Intersection Observer for section entry. 
-   For more complex path animations or specific element transitions, 
-   we can hook into the 'motion' global if needed.
-*/
