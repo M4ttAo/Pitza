@@ -1,73 +1,52 @@
-/* Pitza Liquid Elegance - Scripts */
+/* Pitza Brand-Focused Scripts */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Staggered Hero Reveal
-    const heroElements = ['.hero-title', '.hero-sub', '.hero-cta'];
-    heroElements.forEach((el, index) => {
-        setTimeout(() => {
-            document.querySelector(el).classList.add('active');
-        }, 200 * index + 300);
+    // Trigger Hero Animations
+    const heroAnims = ['.hero-title', '.hero-sub', '.hero-cta'];
+    heroAnims.forEach((selector) => {
+        const el = document.querySelector(selector);
+        if (el) el.classList.add('active');
     });
 
-    // Intersection Observer for Section Reveal
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    // Intersection Observer for Sections
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
 
-    // Navbar Scroll Refinement
+    // Navbar Scroll Behavior
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.paddingTop = '1rem';
-            navbar.style.paddingBottom = '1rem';
-            navbar.querySelector('div').style.backgroundColor = 'rgba(15, 15, 15, 0.7)';
+        if (window.scrollY > 100) {
+            navbar.style.transform = 'translateY(-10px) scale(0.95)';
+            navbar.querySelector('div').style.backgroundColor = 'rgba(10, 10, 10, 0.8)';
         } else {
-            navbar.style.paddingTop = '2rem';
-            navbar.style.paddingBottom = '2rem';
+            navbar.style.transform = 'translateY(0) scale(1)';
             navbar.querySelector('div').style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
         }
     });
 
-    // Parallax effect on pizza (optional, smooth)
-    const pizzaImg = document.querySelector('.hero-img-wrap');
-    window.addEventListener('scroll', () => {
-        const speed = 0.05;
-        const yPos = window.scrollY * speed;
-        if (pizzaImg) {
-            pizzaImg.style.transform = `translateY(${yPos}px)`;
-        }
-    });
-
-    // Simple Form Validation Feedback
+    // Form Mock Submission
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Richiesta Inviata';
-            btn.style.backgroundColor = '#10B981'; // Success Green
-            
+            btn.innerText = 'Richiesta Ricevuta';
+            btn.classList.add('bg-green-600');
             setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.backgroundColor = '';
+                btn.innerText = 'Invia la richiesta';
+                btn.classList.remove('bg-green-600');
                 form.reset();
             }, 3000);
         });

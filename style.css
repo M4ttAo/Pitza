@@ -1,76 +1,72 @@
-/* Pitza Liquid Elegance - Styles */
+/* Pitza Brand-Focused Styles */
 
 :root {
     --primary: #FF3B30;
-    --deep: #0F0F0F;
+    --deep: #0A0A0A;
 }
 
 body {
     scroll-behavior: smooth;
+    background-color: var(--deep);
 }
 
-/* Aurora Blobs Animation */
+/* Aurora Blobs */
 @keyframes blob-float {
     0% { transform: translate(0, 0) scale(1); }
     33% { transform: translate(30px, -50px) scale(1.1); }
     66% { transform: translate(-20px, 20px) scale(0.9); }
     100% { transform: translate(0, 0) scale(1); }
 }
+.blob { animation: blob-float 20s infinite ease-in-out; }
 
-.blob {
-    animation: blob-float 20s infinite ease-in-out;
+/* Hero Logo Animation */
+.hero-logo-wrap {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: logo-entry 1.5s cubic-bezier(0.2, 1, 0.2, 1) forwards;
 }
 
-.blob-2 { animation-delay: -5s; animation-duration: 25s; }
-.blob-3 { animation-delay: -10s; animation-duration: 18s; }
+@keyframes logo-entry {
+    to { opacity: 1; transform: scale(1); }
+}
 
-/* Mask Reveal for Hero */
+/* Logo Floating Effect */
+.hero-logo-wrap img {
+    animation: logo-float 6s infinite ease-in-out;
+}
+
+@keyframes logo-float {
+    0%, 100% { transform: translateY(0); filter: drop-shadow(0 0 20px rgba(255, 59, 48, 0.1)); }
+    50% { transform: translateY(-10px); filter: drop-shadow(0 0 40px rgba(255, 59, 48, 0.3)); }
+}
+
+/* Text Entry */
 .hero-title, .hero-sub, .hero-cta {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
-}
-
-.hero-title.active { opacity: 1; transform: translateY(0); }
-.hero-sub.active { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
-.hero-cta.active { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
-
-/* Floating Pizza */
-@keyframes floating-slow {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
-
-.floating-slow {
-    animation: floating-slow 8s infinite ease-in-out;
-}
-
-/* Service Cards Parallax */
-.service-card {
-    transition: transform 0.4s cubic-bezier(0.2, 1, 0.2, 1), background-color 0.4s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-
-/* Section Transitions */
-section {
-    opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
     transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
+.hero-title.active { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.hero-sub.active { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+.hero-cta.active { opacity: 1; transform: translateY(0); transition-delay: 0.9s; }
+
+/* Service Cards */
+.service-card {
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(255, 59, 48, 0.3);
+}
+
+/* Sections Reveal */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 1, 0.2, 1);
+}
 section.is-visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* Custom Horizontal Scrollbar for Gallery */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-
-/* Inputs focus state */
-input:focus ~ label, textarea:focus ~ label {
-    color: var(--primary);
 }
