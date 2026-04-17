@@ -1,9 +1,41 @@
-/* Pitza Vibrant - Styles */
+/* Pitza Modern Dark - Styles */
 
 :root {
     --primary: #FF3B30;
-    --dark: #1A1A1A;
-    --light: #F9F9F9;
+    --dark: #000000;
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Section Reveal */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reveal Items Hero */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Modal Animation */
@@ -16,38 +48,23 @@
     animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* No scrollbar utility */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Section Reveal on scroll */
-section {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Horizontal Scroll Snap */
+/* Gallery Slider */
 #gallery-slider {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
 
-/* Event Block Image scale on hover */
-.event-block img {
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s;
+/* Custom Scrollbar for the site */
+::-webkit-scrollbar {
+    width: 6px;
 }
-
-.event-block:hover img {
-    transform: scale(1.1);
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }
